@@ -1,1 +1,27 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --main-text-font-family: "Inter-Variable";
+    --accent-font-family: "PressStart2P";
+    --main-text-font-weight: 400;
+    --header-font-weight: 700;
+    --inline-size: calc(700px / 1440px * 100%);
+    --header-block-padding: clamp(120px, 117.18px + 0.75vw, 128px);
+    --section-border-color: #000;
+    --card-image-border-color: #000;
+    --button-border-color: #000;
+    --button-bg-color: #fff;
+    --header-background-color: #fff;
+    --header-title-font-size: clamp(3.0625rem, 2.7117rem + 1.4967vw, 4.0625rem);
+    --header-font-size: clamp(0.875rem, 0.6777rem + 0.8419vw, 1.4375rem);
+    --gradient-mesh-color: #d3d3d3;
+    --card-background-color: #fff;
+    --card-title-padding: 3px 10px;
+    --card-label-stroke-color: #fff;
+}
+
+@media screen and (width <= 375px) {
+    :root {
+        --inline-size: 100%;
+        --card-title-padding: 4px 10px;
+    }
+}
