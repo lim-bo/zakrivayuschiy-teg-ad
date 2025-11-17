@@ -123,6 +123,38 @@
   transform: scale(1.1);
 }
 
+.warm-filter {
+  filter: saturate(250%);
+}
+
+.sepia-brightness-filter {
+  filter: sepia(0.8) brightness(0.6);
+}
+
+.contrast-filter {
+  filter: contrast(150%);
+}
+
+.brightness-grayscale-filter {
+  filter: brightness(0.6) grayscale(0.7);
+}
+
+.brightness-filter {
+  filter: brightness(1.2);
+}
+
+.grayscale-filter {
+  filter: grayscale(1);
+}
+
+.brightness-low-filter {
+  filter: brightness(0.6);
+}
+
+.contrast-saturate-filter {
+  filter: contrast(200%) saturate(120%);
+}
+
 .card__content {
   padding: 25px;
   display: flex;
@@ -176,4 +208,63 @@
   background-color: var(--button-bg-color);
   padding: 15px 20px;
   border: 2px solid var(--button-border-color);
+}
+
+@media screen and (width < 376px) {
+  .save-button {
+    flex-direction: column;
+  }
+}
+
+#save-dialog {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  block-size: 195px;
+  inline-size: clamp(341px, 336.77px + 1.13vw, 353px);
+  padding: var(--close-dialog-button-padding);
+  transition: opacity 0.3s ease-out;
+}
+
+#save-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#save-dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+  transition: none;
+}
+
+.save-dialog__content {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+
+.save-dialog__content-text {
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+  grid-column: 2;
+}
+
+.close-dialog-button {
+  border: 2px solid var(--button-border-color);
+  background-color: var(--button-bg-color);
+  inline-size: 100%;
+  block-size: 38px;
+  padding: 12.5px;
+  text-transform: uppercase;
+}
+
+#save-dialog[open] svg {
+  grid-column: 1;
 }

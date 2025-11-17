@@ -32,7 +32,7 @@
           </h2>
           <div class="card__image-wrap">
             <img 
-              class="card__image"
+              class="card__image warm-filter"
               src="./images/image_1.jpg"
               alt="Кот в новогоднем колпаке на фоне праздничнного камина серьёзным взглядом смотрит в камеру"
             />
@@ -67,11 +67,11 @@
           </h2>
           <div class="card__image-wrap">
             <img 
-              class="card__image"
+              class="card__image contrast-filter"
               src="./images/image_2.jpg"
               alt="Кот с серёзным взглядом смотрит в камеру и говорит Nah, I'd win"
             />
-            <span class="card__image-label">&lt;the overcomer&gt;</span>
+            <span class="card__image-label">&lt;The OVERCOMER&gt;</span>
           </div>
           <div class="card__content">
             <div class="card__content-text">
@@ -103,11 +103,11 @@
           </h2>
           <div class="card__image-wrap">
             <img 
-              class="card__image"
+              class="card__image sepia-brightness-filter"
               src="./images/image_3.jpg"
               alt="Код со взглядом, полным сомнения, смотрит в камеру"
             />
-            <span class="card__image-label">&lt;warfare&gt;</span>
+            <span class="card__image-label">&lt;WARFRARE&gt;</span>
           </div>
           <div class="card__content">
             <div class="card__content-text">
@@ -138,11 +138,11 @@
           </h2>
           <div class="card__image-wrap">
             <img 
-              class="card__image"
+              class="card__image brightness-grayscale-filter"
               src="./images/image_4.jpg"
               alt="Кот с уверенным лицом, котовый на свершение идеала, смотрит в камеру"
             />
-            <span class="card__image-label">&lt;matured&gt;</span>
+            <span class="card__image-label">&lt;MATURED&gt;</span>
           </div>
           <div class="card__content">
             <div class="card__content-text">
@@ -173,11 +173,11 @@
           </h2>
           <div class="card__image-wrap">
             <img 
-              class="card__image"
+              class="card__image brightness-filter"
               src="./images/image_5.jpg"
               alt="Группа котов-друзей фотографируется на фоне храма в Китае и строит радостные мордочки"
             />
-            <span class="card__image-label">&lt;fellowship&gt;</span>
+            <span class="card__image-label">&lt;FELLOWSHIP&gt;</span>
           </div>
           <div class="card__content">
             <div class="card__content-text">
@@ -208,11 +208,11 @@
           </h2>
           <div class="card__image-wrap">
             <img 
-              class="card__image"
+              class="card__image grayscale-filter"
               src="./images/image_6.jpg"
               alt="Кот с серьёзным лицом, одетый в костюм, смотрит в камеру"
             />
-            <span class="card__image-label">&lt;wisdom&gt;</span>
+            <span class="card__image-label">&lt;WISDOM&gt;</span>
           </div>
           <div class="card__content">
             <div class="card__content-text">
@@ -242,11 +242,11 @@
           </h2>
           <div class="card__image-wrap">
             <img 
-              class="card__image"
+              class="card__image brightness-low-filter"
               src="./images/image_7.jpg"
               alt="Чёрный кот стоит перед рыжим котом и со взглядом, полным отчаяния, смотрит на собеседника"
             />
-            <span class="card__image-label">&lt;never give up&gt;</span>
+            <span class="card__image-label">&lt;NEVER GIVE UP&gt;</span>
           </div>
           <div class="card__content">
             <div class="card__content-text">
@@ -278,7 +278,7 @@
           </h2>
           <div class="card__image-wrap">
             <img 
-              class="card__image"
+              class="card__image contrast-saturate-filter"
               src="./images/image_8.jpg"
               alt="Кот с ярко-выраженными скулами уверенно смотрит в камеру"
             />
@@ -312,13 +312,26 @@
       </ul>
     </main>
     <footer class="footer section">
-      <button class="save-button">
+      <button class="save-button" aria-controls="save-dialog" type="button" onclick="window['save-dialog'].showModal()">
         <svg class="floppy-icon" width="21" height="21">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
     </footer>
+    <dialog id="save-dialog">
+      <div class="save-dialog__content">
+        <svg class="floppy-icon" width="39" height="39">
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <h3 class="save-dialog__content-text">
+          Вставьте дискету, чтобы продолжить
+        </h3>
+      </div>
+      <button class="close-dialog-button" type="submit" onclick="window['save-dialog'].close()">
+        <span class="button__text">OK</span>
+      </button>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
