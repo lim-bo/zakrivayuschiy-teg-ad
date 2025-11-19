@@ -352,7 +352,7 @@
       </ul>
     </main>
     <footer class="footer section">
-      <button class="save-button text-button" type="button" aria-controls="save-dialog" onclick="document.getElementById('save-dialog').showModal()">
+      <button class="save-button text-button" type="button" aria-controls="save-dialog" onclick="window['save-dialog'].showModal()">
         <svg class="floppy-icon" width="21" height="21">
           <use href="#floppy"></use>
         </svg>
@@ -368,7 +368,7 @@
           Вставьте дискету, чтобы продолжить
         </h3>
       </div>
-      <button class="close-dialog-button text-button" type="button" onclick="document.getElementById('save-dialog').close()">
+      <button class="close-dialog-button text-button" type="submit" onclick="window['save-dialog'].close()">
         <span class="button__text">OK</span>
       </button>
     </dialog>
