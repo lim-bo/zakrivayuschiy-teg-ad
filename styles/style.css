@@ -9,6 +9,33 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+@keyframes heart-scale {
+  0% {
+    transform: scale(1);
+    }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sparks-popped-up {
+  0% {
+    fill-opacity: 0;
+  }
+
+  50% {
+    fill-opacity: 1;
+  }
+
+  100% {
+    fill-opacity: 0;
+  }
+}
 
 .page {
   display: flex;
@@ -117,6 +144,7 @@
   object-fit: cover;
   object-position: center;
   transition: transform 2s ease-in-out;
+  transition-delay: 0.5s;
 }
 
 .card__image:hover {
@@ -175,21 +203,152 @@
   block-size: 38px;
   margin: 25px;
   display: flex;
+  align-items: center;
 }
+
+.card__icon-button {
+  block-size: 100%;
+  transition: border-color 0.3s ease;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--like-icon-button-outline-from);
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--like-icon-button-outline-to);
+}
+
+/* Стилизация сердечка и его состояний */
 
 .like-icon {
   block-size: 100%;
 }
 
+.heart {
+  transform-origin: center;
+}
+
+.main-body, .core {
+  fill: none;
+  fill-opacity: 0;
+}
+
+.sparks {
+  fill-opacity: 0;
+}
+
+.contour {
+  fill: var(--contour-color);
+  transition: fill 0.1s linear;
+}
+
+.core {
+  fill: var(--contour-color);
+  transition: fill-opacity 0.3s 0.03s;
+}
+
+.main-body {
+  fill: var(--contour-color);
+  transition: fill-opacity 0.3s;
+}
+
+.card__icon-button:hover .core {
+  fill-opacity: 1;
+  transition-delay: 0s;
+}
+
+.card__icon-button:hover .main-body {
+  fill-opacity: 1;
+  transition-delay: 0.05s;
+}
+
+.card__icon-button:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.05s;
+}
+
+.like-icon.is-liked {
+  animation: heart-scale 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  fill-opacity: 1;
+  transition: fill 0.3s, fill-opacity 0.3s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  fill-opacity: 1;
+  transition: fill 0.3s 0.05s, fill-opacity 0.3s 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.06s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-popped-up 0.3s ease-in 0.3s;
+}
+
+/* Конец стилизации сердечка */
+
+.text-button {
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
 .card__like-button {
+  position: relative;
   border: 2px solid var(--button-border-color);
   block-size: 100%;
   inline-size: 130px;
-  padding: 12.5px 37px;
+  padding: 12.5px;
   text-align: center;
 }
 
+.text-button:focus {
+  outline: none;
+}
+
+.text-button:focus-visible {
+  box-shadow: 2px 2px 0 var(--button-shadow-color);
+}
+
+.text-button::before {
+  position: absolute;
+  content: "";
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  block-size: 100%;
+  inline-size: 100%;
+  background-color: var(--button-hover-bg-color);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+
+.text-button:hover::before {
+  transform: scaleX(1);
+}
+
+.text-button:hover .button__text {
+  color: var(--button-hover-color);
+  background-blend-mode: difference;
+}
+
 .button__text {
+  position: relative;
   font-family: var(--accent-font-family), sans-serif;
   font-size: 14px;
   line-height: 0.9;
@@ -208,6 +367,13 @@
   background-color: var(--button-bg-color);
   padding: 15px 20px;
   border: 2px solid var(--button-border-color);
+}
+
+.text-button:hover .floppy-icon {
+  position: relative;
+  stroke: var(--button-hover-color);
+  fill: var(--button-hover-color);
+  mix-blend-mode: difference;
 }
 
 @media screen and (width < 376px) {
