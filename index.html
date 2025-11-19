@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/favicon.ico" sizes="any">
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./images/favicon.png">
     <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/animations.css">
   </head>
   <body class="page">
     <header class="header section">
@@ -35,7 +35,7 @@
               class="card__image warm-filter"
               src="./images/image_1.jpg"
               alt="Кот в новогоднем колпаке на фоне праздничнного камина серьёзным взглядом смотрит в камеру"
-            />
+            >
             <span class="card__image-label">&lt;newbee&gt;</span>
           </div>
           <div class="card__content">
@@ -75,7 +75,7 @@
               class="card__image contrast-filter"
               src="./images/image_2.jpg"
               alt="Кот с серёзным взглядом смотрит в камеру и говорит: 'Nah, I'd win'"
-            />
+            >
             <span class="card__image-label">&lt;The OVERCOMER&gt;</span>
           </div>
           <div class="card__content">
@@ -116,7 +116,7 @@
               class="card__image sepia-brightness-filter"
               src="./images/image_3.jpg"
               alt="Код со взглядом, полным сомнения, смотрит в камеру"
-            />
+            >
             <span class="card__image-label">&lt;WARFRARE&gt;</span>
           </div>
           <div class="card__content">
@@ -156,7 +156,7 @@
               class="card__image brightness-grayscale-filter"
               src="./images/image_4.jpg"
               alt="Кот с уверенным лицом, котовый на свершение идеала, смотрит в камеру"
-            />
+            >
             <span class="card__image-label">&lt;MATURED&gt;</span>
           </div>
           <div class="card__content">
@@ -196,7 +196,7 @@
               class="card__image brightness-filter"
               src="./images/image_5.jpg"
               alt="Группа котов-друзей фотографируется на фоне храма в Китае и строит радостные мордочки"
-            />
+            >
             <span class="card__image-label">&lt;FELLOWSHIP&gt;</span>
           </div>
           <div class="card__content">
@@ -236,7 +236,7 @@
               class="card__image grayscale-filter"
               src="./images/image_6.jpg"
               alt="Кот с серьёзным лицом, одетый в костюм, смотрит в камеру"
-            />
+            >
             <span class="card__image-label">&lt;WISDOM&gt;</span>
           </div>
           <div class="card__content">
@@ -275,7 +275,7 @@
               class="card__image brightness-low-filter"
               src="./images/image_7.jpg"
               alt="Чёрный кот стоит перед рыжим котом и со взглядом, полным отчаяния, смотрит на собеседника"
-            />
+            >
             <span class="card__image-label">&lt;NEVER GIVE UP&gt;</span>
           </div>
           <div class="card__content">
@@ -316,7 +316,7 @@
               class="card__image contrast-saturate-filter"
               src="./images/image_8.jpg"
               alt="Кот с ярко-выраженными скулами уверенно смотрит в камеру"
-            />
+            >
             <span class="card__image-label">&lt;triumph&gt;</span>
           </div>
           <div class="card__content">
@@ -352,7 +352,7 @@
       </ul>
     </main>
     <footer class="footer section">
-      <button class="save-button text-button" aria-controls="save-dialog" type="button" onclick="window['save-dialog'].showModal()">
+      <button class="save-button text-button" type="button" aria-controls="save-dialog" onclick="document.getElementById('save-dialog').showModal()">
         <svg class="floppy-icon" width="21" height="21">
           <use href="#floppy"></use>
         </svg>
@@ -368,29 +368,29 @@
           Вставьте дискету, чтобы продолжить
         </h3>
       </div>
-      <button class="close-dialog-button text-button" type="submit" onclick="window['save-dialog'].close()">
+      <button class="close-dialog-button text-button" type="button" onclick="document.getElementById('save-dialog').close()">
         <span class="button__text">OK</span>
       </button>
     </dialog>
     <script src="./scripts/like.js"></script>
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <symbol id="floppy" viewBox="0 0 39 39">
+          <path d="M0 0h3v3H0zM0 3h3v3H0zM0 6h3v3H0zM0 9h3v3H0zM0 12h3v3H0zM0 15h3v3H0zM0 18h3v3H0zM0 21h3v3H0zM0 24h3v3H0zM0 27h3v3H0zM0 30h3v3H0zM0 33h3v3H0zM0 36h3v3H0zM33 0v3h-3V0z"/>
+          <path d="M30.003 0v3h-3V0zM27 0v3h-3V0zM24 0v3h-3V0zM20.999 0v3h-3V0z"/>
+          <path d="M18 0v3h-3V0zM14.999 0v3h-3V0z"/>
+          <path d="M12 0v3H9V0zM8.996 0v3h-3V0z"/>
+          <path d="M6 0v3H3V0zM36 3v3h-3V3zM8.996 6v3h-3V6zM8.996 3v3h-3V3zM8.996 9v3h-3V9zM30.003 6v3h-3V6zM30.003 3v3h-3V3zM30.003 9v3h-3V9zM24 6v3h-3V6zM24 3v3h-3V3zM24 9v3h-3V9zM30.003 12v3h-3v-3zM27 12v3h-3v-3zM24 12v3h-3v-3zM20.999 12v3h-3v-3z"/>
+          <path d="M18 12v3h-3v-3zM14.999 12v3h-3v-3z"/>
+          <path d="M12 12v3H9v-3zM8.996 12v3h-3v-3zM33 21v3h-3v-3z"/>
+          <path d="M30.003 21v3h-3v-3zM27 21v3h-3v-3zM24 21v3h-3v-3zM20.999 21v3h-3v-3z"/>
+          <path d="M18 21v3h-3v-3zM14.999 21v3h-3v-3z"/>
+          <path d="M12 21v3H9v-3zM8.996 21v3h-3v-3zM33 24v3h-3v-3zM8.996 24v3h-3v-3zM33 27v3h-3v-3zM8.996 27v3h-3v-3zM33 30v3h-3v-3zM8.996 30v3h-3v-3zM8.996 33v3h-3v-3zM33 33v3h-3v-3zM36 36v3h-3v-3zM33 36v3h-3v-3z"/>
+          <path d="M30.003 36v3h-3v-3zM27 36v3h-3v-3zM24 36v3h-3v-3zM20.999 36v3h-3v-3z"/>
+          <path d="M18 36v3h-3v-3zM14.999 36v3h-3v-3z"/>
+          <path d="M12 36v3H9v-3zM8.996 36v3h-3v-3z"/>
+          <path d="M6 36v3H3v-3zM39 39h-3v-3h3zM39 36h-3v-3h3zM39 33h-3v-3h3zM39 30h-3v-3h3zM39 27h-3v-3h3zM39 24h-3v-3h3zM39 21h-3v-3h3zM39 18h-3v-3h3zM39 15h-3v-3h3zM39 12h-3V9h3zM39 9h-3V6h3z"/>
+      </symbol>
+    </svg>
   </body>
 </html>
 
-<svg xmlns="http://www.w3.org/2000/svg">
-    <symbol id="floppy" viewBox="0 0 39 39">
-        <path d="M0 0h3v3H0zM0 3h3v3H0zM0 6h3v3H0zM0 9h3v3H0zM0 12h3v3H0zM0 15h3v3H0zM0 18h3v3H0zM0 21h3v3H0zM0 24h3v3H0zM0 27h3v3H0zM0 30h3v3H0zM0 33h3v3H0zM0 36h3v3H0zM33 0v3h-3V0z"/>
-        <path d="M30.003 0v3h-3V0zM27 0v3h-3V0zM24 0v3h-3V0zM20.999 0v3h-3V0z"/>
-        <path d="M18 0v3h-3V0zM14.999 0v3h-3V0z"/>
-        <path d="M12 0v3H9V0zM8.996 0v3h-3V0z"/>
-        <path d="M6 0v3H3V0zM36 3v3h-3V3zM8.996 6v3h-3V6zM8.996 3v3h-3V3zM8.996 9v3h-3V9zM30.003 6v3h-3V6zM30.003 3v3h-3V3zM30.003 9v3h-3V9zM24 6v3h-3V6zM24 3v3h-3V3zM24 9v3h-3V9zM30.003 12v3h-3v-3zM27 12v3h-3v-3zM24 12v3h-3v-3zM20.999 12v3h-3v-3z"/>
-        <path d="M18 12v3h-3v-3zM14.999 12v3h-3v-3z"/>
-        <path d="M12 12v3H9v-3zM8.996 12v3h-3v-3zM33 21v3h-3v-3z"/>
-        <path d="M30.003 21v3h-3v-3zM27 21v3h-3v-3zM24 21v3h-3v-3zM20.999 21v3h-3v-3z"/>
-        <path d="M18 21v3h-3v-3zM14.999 21v3h-3v-3z"/>
-        <path d="M12 21v3H9v-3zM8.996 21v3h-3v-3zM33 24v3h-3v-3zM8.996 24v3h-3v-3zM33 27v3h-3v-3zM8.996 27v3h-3v-3zM33 30v3h-3v-3zM8.996 30v3h-3v-3zM8.996 33v3h-3v-3zM33 33v3h-3v-3zM36 36v3h-3v-3zM33 36v3h-3v-3z"/>
-        <path d="M30.003 36v3h-3v-3zM27 36v3h-3v-3zM24 36v3h-3v-3zM20.999 36v3h-3v-3z"/>
-        <path d="M18 36v3h-3v-3zM14.999 36v3h-3v-3z"/>
-        <path d="M12 36v3H9v-3zM8.996 36v3h-3v-3z"/>
-        <path d="M6 36v3H3v-3zM39 39h-3v-3h3zM39 36h-3v-3h3zM39 33h-3v-3h3zM39 30h-3v-3h3zM39 27h-3v-3h3zM39 24h-3v-3h3zM39 21h-3v-3h3zM39 18h-3v-3h3zM39 15h-3v-3h3zM39 12h-3V9h3zM39 9h-3V6h3z"/>
-    </symbol>
-</svg>
